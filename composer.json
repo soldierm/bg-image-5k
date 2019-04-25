@@ -1,0 +1,21 @@
+{
+  "name": "soldierm/bg-image-5k",
+  "description": "5K分辨率超清唯美壁纸",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "zhou",
+      "email": "zy952014475@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "bg\\": "./src"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "netresearch/jsonmapper": "^1.4"
+  }
+}
