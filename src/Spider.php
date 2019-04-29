@@ -86,9 +86,10 @@ class Spider
             $json = guzzle_json_decode($response->getBody());
             $this->images = Instance::getJsonMapper()->mapArray($json, [], Image::class);
             array_walk($this->images, function (Image $image, $key) {
-                echo "正在下载第{$key}张图片...\n";
+                $sort = ++$key;
+                echo "正在下载第{$sort}张图片...\n";
                 $image->download((int)$this->type);
-                echo "第{$key}张图片下载完成...\n";
+                echo "第{$sort}张图片下载完成...\n";
             });
         } catch (\Exception $exception) {
             exit("{$exception->getMessage()} \n");
